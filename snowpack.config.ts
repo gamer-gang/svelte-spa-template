@@ -8,8 +8,6 @@ export default <SnowpackUserConfig>{
     ],
     '@snowpack/plugin-dotenv',
     '@snowpack/plugin-svelte',
-    // '@snowpack/plugin-typescript',
-    '@snowpack/plugin-webpack',
   ],
   mount: {
     public: '/',
@@ -24,5 +22,18 @@ export default <SnowpackUserConfig>{
   },
   buildOptions: {
     baseUrl: '/svelte-spa-template',
+    clean: true,
+    sourceMaps: true,
+  },
+  installOptions: {
+    treeshake: true,
+    sourceMap: true,
+  },
+  experiments: {
+    optimize: {
+      bundle: true,
+      minify: true,
+      target: 'es2018',
+    },
   },
 };
