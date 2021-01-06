@@ -1,11 +1,9 @@
 <script lang="ts">
   import { fade } from 'svelte/transition';
-  import src from '../assets/svelte-horizontal.png';
 </script>
 
 <style lang="scss">
   img {
-    width: 30rem;
     display: inline-block;
   }
 
@@ -19,5 +17,7 @@
 <div in:fade={{ duration: 100 }}>
   <h2>very good page 2</h2>
 
-  <span><img {src} alt="very good svelte logo" /> is the best</span>
+  <span><img src="svelte-horizontal.png" alt="very good svelte logo" width="160" />
+    is the best!!!!!
+  </span>
 </div>

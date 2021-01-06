@@ -16,7 +16,6 @@
       asyncComponent: () => import('./pages/Page3.svelte'),
       loadingComponent: Loading,
     }),
-    '/test': Loading,
   };
 </script>
 
