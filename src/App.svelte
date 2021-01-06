@@ -1,69 +1,42 @@
-<script>
-  import {onMount} from 'svelte';
-  let count = 0;
-  onMount(() => {
-    const interval = setInterval(() => count++, 1000);
-    return () => {
-      clearInterval(interval);
-    };
-  });
+<script lang="ts">
+  import type { RouteDefinition } from 'svelte-spa-router';
+  import Router from 'svelte-spa-router';
+  import { wrap } from 'svelte-spa-router/wrap';
+  import AppBar from './components/AppBar.svelte';
+  import Loading from './components/Loading.svelte';
+  import Home from './pages/Home.svelte';
+
+  const routes: RouteDefinition = {
+    '/': Home,
+    '/page2': wrap({
+      asyncComponent: () => import('./pages/Page2.svelte'),
+      loadingComponent: Loading,
+    }),
+    '/page3': wrap({
+      asyncComponent: () => import('./pages/Page3.svelte'),
+      loadingComponent: Loading,
+    }),
+    '/test': Loading,
+  };
 </script>
 
-<style>
-  :global(body) {
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-  }
-  .App {
-    text-align: center;
-  }
-  .App code {
-    background: #0002;
-    padding: 4px 8px;
-    border-radius: 4px;
-  }
-  .App p {
-    margin: 0.4rem;
+<style lang="scss" global>
+  @import 'modern-normalize/modern-normalize';
+
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu,
+      Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+    background-color: #eee;
   }
 
-  .App-header {
-    background-color: #f9f6f6;
-    color: #333;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: calc(10px + 2vmin);
-  }
-  .App-link {
-    color: #ff3e00;
-  }
-  .App-logo {
-    height: 36vmin;
-    pointer-events: none;
-    margin-bottom: 3rem;
-    animation: App-logo-pulse infinite 1.6s ease-in-out alternate;
-  }
-  @keyframes App-logo-pulse {
-    from {
-      transform: scale(1);
-    }
-    to {
-      transform: scale(1.06);
-    }
+  main {
+    margin: 8px;
+    margin-top: 64px;
   }
 </style>
 
-<div class="App">
-  <header class="App-header">
-    <img src="/logo.svg" class="App-logo" alt="logo" />
-    <p>Edit <code>src/App.svelte</code> and save to reload.</p>
-    <p>Page has been open for <code>{count}</code> seconds.</p>
-    <p>
-      <a class="App-link" href="https://svelte.dev" target="_blank" rel="noopener noreferrer">
-        Learn Svelte
-      </a>
-    </p>
-  </header>
-</div>
+<AppBar />
+<main>
+  <Router {routes} />
+</main>
