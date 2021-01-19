@@ -16,20 +16,24 @@
       asyncComponent: () => import('./pages/Page3.svelte'),
       loadingComponent: Loading,
     }),
+    '*': wrap({
+      asyncComponent: () => import('./pages/NotFound.svelte'),
+      loadingComponent: Loading,
+    }),
   };
 </script>
 
 <style lang="scss" global>
-  @import 'modern-normalize/modern-normalize';
+  @import './normalize';
+  @import './colors';
 
   body {
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu,
-      Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-
-    background-color: #eee;
+    font-family: 'Inter', Arial, Helvetica, sans-serif;
+    background-color: cool-gray(50);
   }
 
   main {
+    color: cool-gray(800);
     margin: 8px;
     margin-top: 64px;
   }

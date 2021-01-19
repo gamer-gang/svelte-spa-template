@@ -8,20 +8,22 @@
 </script>
 
 <style lang="scss">
+  @import '../colors';
+
   button {
-    background-color: orangered;
+    background-color: orange(300);
     border: none;
     padding: 8px;
-    color: #000;
+    color: cool-gray(700);
     border-radius: 0.25rem;
-    box-shadow: 4px 4px #ddd;
+    box-shadow: 4px 4px cool-gray(300);
     cursor: pointer;
-    transition: background-color 75ms linear;
+    transition: background-color 150ms ease-in-out;
     &:hover {
-      background-color: darken(orangered, 8%);
+      background-color: orange(400);
     }
     &:active {
-      background-color: darken(orangered, 16%);
+      background-color: orange(600);
     }
     &:focus {
       outline: none;
