@@ -5,10 +5,10 @@
       "imports": []
     },
     "_dist_/App.svelte.css": {
-      "bytes": 587,
+      "bytes": 1449,
       "imports": []
     },
-    "_snowpack/pkg/common/index-644396ce.js": {
+    "_snowpack/pkg/common/index-b18d4aab.js": {
       "bytes": 20188,
       "imports": []
     },
@@ -16,7 +16,7 @@
       "bytes": 510,
       "imports": [
         {
-          "path": "_snowpack/pkg/common/index-644396ce.js"
+          "path": "_snowpack/pkg/common/index-b18d4aab.js"
         }
       ]
     },
@@ -24,11 +24,11 @@
       "bytes": 4560,
       "imports": []
     },
-    "_snowpack/pkg/common/Router-3cbe548d.js": {
+    "_snowpack/pkg/common/Router-be9a671a.js": {
       "bytes": 26253,
       "imports": [
         {
-          "path": "_snowpack/pkg/common/index-644396ce.js"
+          "path": "_snowpack/pkg/common/index-b18d4aab.js"
         },
         {
           "path": "_snowpack/pkg/common/wrap-14f018b7.js"
@@ -39,13 +39,13 @@
       "bytes": 233,
       "imports": [
         {
-          "path": "_snowpack/pkg/common/index-644396ce.js"
+          "path": "_snowpack/pkg/common/index-b18d4aab.js"
         },
         {
           "path": "_snowpack/pkg/common/wrap-14f018b7.js"
         },
         {
-          "path": "_snowpack/pkg/common/Router-3cbe548d.js"
+          "path": "_snowpack/pkg/common/Router-be9a671a.js"
         }
       ]
     },
@@ -65,13 +65,13 @@
       "bytes": 3492,
       "imports": [
         {
-          "path": "_snowpack/pkg/common/index-644396ce.js"
+          "path": "_snowpack/pkg/common/index-b18d4aab.js"
         },
         {
           "path": "_snowpack/pkg/common/wrap-14f018b7.js"
         },
         {
-          "path": "_snowpack/pkg/common/Router-3cbe548d.js"
+          "path": "_snowpack/pkg/common/Router-be9a671a.js"
         }
       ]
     },
@@ -97,7 +97,7 @@
       "bytes": 308,
       "imports": [
         {
-          "path": "_snowpack/pkg/common/index-644396ce.js"
+          "path": "_snowpack/pkg/common/index-b18d4aab.js"
         }
       ]
     },
@@ -181,7 +181,7 @@
       ]
     },
     "_dist_/App.svelte.js": {
-      "bytes": 2199,
+      "bytes": 2151,
       "imports": [
         {
           "path": "_dist_/App.svelte.css"
@@ -252,7 +252,7 @@
         "_dist_/App.svelte.css": {
           "bytesInOutput": 0
         },
-        "_snowpack/pkg/common/index-644396ce.js": {
+        "_snowpack/pkg/common/index-b18d4aab.js": {
           "bytesInOutput": 7085
         },
         "_snowpack/pkg/svelte/internal.js": {
@@ -261,7 +261,7 @@
         "_snowpack/pkg/common/wrap-14f018b7.js": {
           "bytesInOutput": 873
         },
-        "_snowpack/pkg/common/Router-3cbe548d.js": {
+        "_snowpack/pkg/common/Router-be9a671a.js": {
           "bytesInOutput": 6138
         },
         "_snowpack/pkg/svelte-spa-router.js": {
@@ -295,7 +295,7 @@
           "bytesInOutput": 783
         },
         "_dist_/App.svelte.js": {
-          "bytesInOutput": 733
+          "bytesInOutput": 704
         },
         "_dist_/pages/Page2.svelte.css": {
           "bytesInOutput": 0
@@ -304,13 +304,13 @@
           "bytesInOutput": 60
         }
       },
-      "bytes": 28246
+      "bytes": 28217
     },
     "../~~bundle~~/_dist_/index.css": {
       "imports": [],
       "inputs": {
         "_dist_/App.svelte.css": {
-          "bytesInOutput": 587
+          "bytesInOutput": 1431
         },
         "_dist_/pages/Page2.svelte.css": {
           "bytesInOutput": 107
@@ -325,7 +325,7 @@
           "bytesInOutput": 374
         }
       },
-      "bytes": 2459
+      "bytes": 3303
     }
   }
 }
